@@ -4,14 +4,12 @@ import com.email.ReplyAI.model.EmailRequest;
 import com.email.ReplyAI.service.EmailGeneratorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/email-generator")
+@CrossOrigin(origins = "*")
 public class EmailGeneratorController {
 
     private final EmailGeneratorService emailGeneratorService;
